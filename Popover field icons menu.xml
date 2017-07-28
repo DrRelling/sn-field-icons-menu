@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2017-07-28 16:16:49">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value=""/>
+<application_name/>
+<application_scope/>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>Popover menu for field icons</name>
+<new_count/>
+<origin_sys_id/>
+<release_date/>
+<remote_sys_id>f2078320dbd407c0fdbb74b5ae96195c</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>Adam.Foster2@cbre.com</sys_created_by>
+<sys_created_on>2017-07-28 16:16:49</sys_created_on>
+<sys_id>20378760dbd407c0fdbb74b5ae961963</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Adam.Foster2@cbre.com</sys_updated_by>
+<sys_updated_on>2017-07-28 16:16:49</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_macro_1e4266a04f1003005c9d3b718110c7de</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;macro_popover_container&lt;/name&gt;&lt;scoped_name/&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2017-07-28 13:39:44&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;true&lt;/sys_customer_update&gt;&lt;sys_id&gt;1e4266a04f1003005c9d3b718110c7de&lt;/sys_id&gt;&lt;sys_mod_count&gt;27&lt;/sys_mod_count&gt;&lt;sys_name&gt;macro_popover_container&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_1e4266a04f1003005c9d3b718110c7de&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2017-07-28 16:12:50&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;g:evaluate var="jvar_id" object="true"&gt;
+		// jQuery does NOT like IDs with . in
+		var id = "${ref}".replace(".", "-");
+		id;
+	&lt;/g:evaluate&gt;
+    &lt;span id="${jvar_id}" data-toggle="popover" title="Additional Options" data-content="${ref}" class="btn btn-default icon-arrow-right-rounded"&gt;
+        &lt;span class="sr-only"&gt;More options&lt;/span&gt;
+    &lt;/span&gt;
+    
+    &lt;script&gt;
+        $j(document).ready(function() {
+            var popoverContent = "";	
+			var popoverIcon = $j("#${jvar_id}")
+            
+			// get all buttons before this, take their HTML and then remove them
+            popoverIcon.prevAll().each(function () {
+                popoverContent += this.outerHTML; 
+				this.remove();
+            });
+            
+			// initialize popover
+			popoverIcon.popover({
+                html: true
+            }); 
+
+			// add HTML to popover
+            popoverIcon.attr('data-content', popoverContent);
+		
+			// move popover to end
+			popoverIcon.parent().append(popoverIcon);
+        });
+    &lt;/script&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Adam - Popover UI macro">20378760dbd407c0fdbb74b5ae961963</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>Adam.Foster2@cbre.com</sys_created_by>
+<sys_created_on>2017-07-28 16:16:49</sys_created_on>
+<sys_id>e8378760dbd407c0fdbb74b5ae961963</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Adam.Foster2@cbre.com</sys_updated_by>
+<sys_updated_on>2017-07-28 16:16:49</sys_updated_on>
+<table/>
+<target_name>macro_popover_container</target_name>
+<type>Macro</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
