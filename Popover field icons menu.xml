@@ -18,11 +18,11 @@
 <state>loaded</state>
 <summary/>
 <sys_class_name>sys_remote_update_set</sys_class_name>
-<sys_created_by>Adam.Foster2@cbre.com</sys_created_by>
+<sys_created_by>Adam.Foster</sys_created_by>
 <sys_created_on>2017-07-28 16:16:49</sys_created_on>
 <sys_id>20378760dbd407c0fdbb74b5ae961963</sys_id>
 <sys_mod_count>0</sys_mod_count>
-<sys_updated_by>Adam.Foster2@cbre.com</sys_updated_by>
+<sys_updated_by>Adam.Foster</sys_updated_by>
 <sys_updated_on>2017-07-28 16:16:49</sys_updated_on>
 <update_set display_value=""/>
 <update_source display_value=""/>
@@ -69,13 +69,13 @@
         });
     &lt;/script&gt;
 &lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
-<remote_update_set display_value="Adam - Popover UI macro">20378760dbd407c0fdbb74b5ae961963</remote_update_set>
+<remote_update_set display_value="Popover UI macro">20378760dbd407c0fdbb74b5ae961963</remote_update_set>
 <replace_on_upgrade>false</replace_on_upgrade>
-<sys_created_by>Adam.Foster2@cbre.com</sys_created_by>
+<sys_created_by>Adam.Foster</sys_created_by>
 <sys_created_on>2017-07-28 16:16:49</sys_created_on>
 <sys_id>e8378760dbd407c0fdbb74b5ae961963</sys_id>
 <sys_mod_count>0</sys_mod_count>
-<sys_updated_by>Adam.Foster2@cbre.com</sys_updated_by>
+<sys_updated_by>Adam.Foster</sys_updated_by>
 <sys_updated_on>2017-07-28 16:16:49</sys_updated_on>
 <table/>
 <target_name>macro_popover_container</target_name>
